@@ -67,12 +67,6 @@ Optional: copy `src/.env.example` to `src/.env` and set `ANTHROPIC_API_KEY` for 
 LLM-generated BLUFs. Without it, ThreatLens runs fully offline using a deterministic
 mock narrative.
 
-## Demo
-
-- Video: see [demo/demo-video-link.txt](demo/demo-video-link.txt)
-- Live demo: see [demo/live-demo-url.txt](demo/live-demo-url.txt)
-- Screenshots: [demo/screenshots/](demo/screenshots/)
-
 ## Architecture
 
 See [docs/architecture.md](docs/architecture.md) for the full diagram, component

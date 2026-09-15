@@ -1,0 +1,13 @@
+{
+  "report_id": "TI-003",
+  "title": "Historical Note: 203.0.113.10 Reclassification",
+  "published_date": "2026-06-10",
+  "content": "This address was previously flagged in an internal test range and briefly associated with benign scanning research traffic before being reassigned. Older detections referencing this IP in isolation, without an accompanying account takeover or PowerShell execution, may be outdated and should not automatically be treated as malicious.",
+  "indicators": [
+    "203.0.113.10"
+  ],
+  "techniques": [],
+  "indicator_verdicts": {
+    "203.0.113.10": "outdated"
+  }
+}

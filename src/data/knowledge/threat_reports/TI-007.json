@@ -1,0 +1,11 @@
+{
+  "report_id": "TI-007",
+  "title": "Valid Accounts Abuse in Hybrid Environments",
+  "published_date": "2026-07-22",
+  "content": "Adversaries increasingly favor valid account abuse over malware deployment to evade detection. Indicators include successful authentication shortly after repeated failures from the same source, followed by privileged actions atypical for the account's normal baseline.",
+  "indicators": [],
+  "techniques": [
+    "T1078"
+  ],
+  "indicator_verdicts": {}
+}

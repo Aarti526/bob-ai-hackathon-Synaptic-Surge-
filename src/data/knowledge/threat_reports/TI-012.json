@@ -1,0 +1,13 @@
+{
+  "report_id": "TI-012",
+  "title": "Scheduled Task Persistence Techniques",
+  "published_date": "2026-01-20",
+  "content": "Adversaries commonly abuse scheduled tasks and system services to persist across reboots, often disguised with names resembling legitimate system processes.",
+  "indicators": [],
+  "techniques": [
+    "T1053",
+    "T1543",
+    "T1036"
+  ],
+  "indicator_verdicts": {}
+}

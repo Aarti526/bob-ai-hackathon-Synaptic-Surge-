@@ -1,0 +1,11 @@
+{
+  "report_id": "TI-009",
+  "title": "Phishing-Led Initial Access Trends",
+  "published_date": "2026-04-18",
+  "content": "Phishing remains the dominant initial access vector across observed intrusions, typically followed by credential harvesting and subsequent valid account abuse.",
+  "indicators": [],
+  "techniques": [
+    "T1566"
+  ],
+  "indicator_verdicts": {}
+}

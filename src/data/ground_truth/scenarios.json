@@ -1,0 +1,100 @@
+[
+  {
+    "scenario_id": "ATTACK-001",
+    "description": "Credential brute force, valid-account takeover, and PowerShell execution on a critical finance server",
+    "expected_event_ids": [
+      "SIEM-A00",
+      "SIEM-A01",
+      "SIEM-A02",
+      "SIEM-A03",
+      "SIEM-A04",
+      "SIEM-A05",
+      "SIEM-A06",
+      "EDR-A00",
+      "EDR-A01"
+    ],
+    "expected_priority": "CRITICAL",
+    "expected_techniques": [
+      "T1110",
+      "T1078",
+      "T1059.001",
+      "T1071.001"
+    ]
+  },
+  {
+    "scenario_id": "BENIGN-ADMIN-001",
+    "description": "Administrator running a scheduled PowerShell maintenance script inside the maintenance window - should not be classified as malicious",
+    "expected_event_ids": [
+      "SIEM-B00",
+      "EDR-B00",
+      "EDR-B01"
+    ],
+    "expected_priority": "LOW",
+    "expected_techniques": []
+  },
+  {
+    "scenario_id": "SCANNER-001",
+    "description": "Known internal vulnerability scanner sweeping many hosts - expected to be dampened, not treated as an active attack",
+    "expected_event_ids": [
+      "SIEM-C00",
+      "SIEM-C01",
+      "SIEM-C02",
+      "SIEM-C03",
+      "SIEM-C04",
+      "SIEM-C05",
+      "SIEM-C06",
+      "SIEM-C07",
+      "SIEM-C08",
+      "SIEM-C09",
+      "SIEM-C10",
+      "SIEM-C11",
+      "SIEM-C12",
+      "SIEM-C13",
+      "SIEM-C14",
+      "SIEM-C15",
+      "SIEM-C16",
+      "SIEM-C17"
+    ],
+    "expected_priority": "LOW",
+    "expected_techniques": [
+      "T1046"
+    ]
+  },
+  {
+    "scenario_id": "DISTRIBUTED-001",
+    "description": "A single external IP attempting logins across multiple hosts - should correlate as one incident despite different hostnames",
+    "expected_event_ids": [
+      "SIEM-D00",
+      "SIEM-D01",
+      "SIEM-D02",
+      "SIEM-D03",
+      "SIEM-D04",
+      "SIEM-D05",
+      "SIEM-D06",
+      "SIEM-D07",
+      "SIEM-D08"
+    ],
+    "expected_priority": "MEDIUM",
+    "expected_techniques": [
+      "T1110"
+    ]
+  },
+  {
+    "scenario_id": "SAME-IP-UNRELATED-001",
+    "description": "Same external IP as the attack scenario, but 4 days earlier against an unrelated host/user - must NOT merge into ATTACK-001",
+    "expected_event_ids": [
+      "SIEM-E00"
+    ],
+    "expected_priority": "LOW",
+    "expected_techniques": []
+  },
+  {
+    "scenario_id": "ISOLATED-001",
+    "description": "A single suspicious process with no corroborating events - should not become a critical incident on its own",
+    "expected_event_ids": [
+      "EDR-I00"
+    ],
+    "expected_priority": "LOW",
+    "expected_techniques": []
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "report_id": "TI-010",
+  "title": "Remote Access Tooling Abuse in SMB Environments",
+  "published_date": "2026-03-30",
+  "content": "Legitimate remote access software is frequently repurposed as a command and control channel once initial access is achieved, complicating network-based detection efforts.",
+  "indicators": [],
+  "techniques": [
+    "T1219",
+    "T1105"
+  ],
+  "indicator_verdicts": {}
+}

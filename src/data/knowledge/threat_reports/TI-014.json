@@ -1,0 +1,12 @@
+{
+  "report_id": "TI-014",
+  "title": "Credential Dumping Tooling Refresh",
+  "published_date": "2026-05-25",
+  "content": "Updated tooling for OS credential dumping continues to target LSASS memory and unsecured credential stores; organizations should monitor for unusual LSASS access patterns.",
+  "indicators": [],
+  "techniques": [
+    "T1003",
+    "T1552"
+  ],
+  "indicator_verdicts": {}
+}

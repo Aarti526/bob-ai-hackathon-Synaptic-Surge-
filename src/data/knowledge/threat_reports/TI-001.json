@@ -1,0 +1,18 @@
+{
+  "report_id": "TI-001",
+  "title": "Credential Abuse Campaign Targeting Finance Infrastructure",
+  "published_date": "2026-08-20",
+  "content": "A financially motivated actor has been observed conducting brute-force credential attacks against finance department servers before pivoting to valid account abuse. The campaign is associated with source IP 203.0.113.10, which has been seen attempting rapid successive logins with common administrative usernames before a successful authentication. Following account takeover, the actor has been observed executing encoded PowerShell commands to establish a foothold, consistent with T1059.001. Outbound connections to 198.51.100.23 have been linked to command and control activity for this cluster.",
+  "indicators": [
+    "203.0.113.10",
+    "198.51.100.23"
+  ],
+  "techniques": [
+    "T1078",
+    "T1059.001",
+    "T1110"
+  ],
+  "indicator_verdicts": {
+    "203.0.113.10": "malicious"
+  }
+}

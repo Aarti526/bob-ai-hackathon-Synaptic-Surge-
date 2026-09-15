@@ -1,0 +1,13 @@
+{
+  "report_id": "TI-011",
+  "title": "Discovery Command Patterns Preceding Lateral Movement",
+  "published_date": "2026-02-14",
+  "content": "Account and system discovery commands frequently precede lateral movement attempts, offering a detection opportunity before an intrusion widens in scope.",
+  "indicators": [],
+  "techniques": [
+    "T1087",
+    "T1018",
+    "T1082"
+  ],
+  "indicator_verdicts": {}
+}

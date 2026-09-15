@@ -1,0 +1,12 @@
+{
+  "report_id": "TI-013",
+  "title": "Exfiltration Channel Trends Over Encrypted C2",
+  "published_date": "2026-08-10",
+  "content": "Exfiltration increasingly occurs over the same encrypted channel used for command and control, making network volume analysis more valuable than protocol inspection alone for detection.",
+  "indicators": [],
+  "techniques": [
+    "T1041",
+    "T1573"
+  ],
+  "indicator_verdicts": {}
+}

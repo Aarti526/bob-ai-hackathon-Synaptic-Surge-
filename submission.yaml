@@ -1,0 +1,34 @@
+team:
+  name: "Synaptic Surge"
+  track: "AI"
+  lead:
+    name: "Aarti Jain"
+    email: "23ce045@charusat.edu.in"
+  members:
+    - name: "Jaini Solanki"
+      email: "23cs096@charusat.edu.in"
+    - name: "Kavya Patel"
+      email: "d24it153@charusat.edu.in"
+    - name: "Hemang Kalavadia"
+      email: "23dce054@charusat.edu.in"
+
+submission:
+  title: "ThreatLens"
+  problem_statement: >
+    Security analysts face alert overload: SIEM, EDR, and threat-intel feeds each
+    speak a different schema, most alerts are noise or duplicates, and the events
+    that actually matter are buried among thousands of unrelated ones. Analysts need
+    incident-level understanding, not a wall of individual alerts they must manually
+    correlate.
+  solution_summary: >
+    ThreatLens runs a deterministic pipeline - normalize, deduplicate, correlate,
+    score, map to MITRE ATT&CK, and retrieve relevant threat intelligence - and only
+    then hands the already-evidenced result to an LLM to write a plain-language BLUF
+    (Bottom Line Up Front). The LLM never decides risk or invents IOCs; it only
+    explains evidence the deterministic pipeline has already gathered.
+  key_features:
+    - "Multi-signal correlation engine (identity, timing, behavior progression, threat intel) instead of naive same-IP matching"
+    - "Transparent, weighted 0-100 risk scoring with human-readable contributor explanations"
+    - "Evidence-gated MITRE ATT&CK technique mapping"
+    - "Threat-intel retrieval (RAG) over synthetic reports with conflict surfacing"
+    - "LLM-generated BLUF narratives with a deterministic offline fallback when no API key is set"

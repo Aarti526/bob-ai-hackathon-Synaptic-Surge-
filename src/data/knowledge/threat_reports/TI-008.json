@@ -1,0 +1,12 @@
+{
+  "report_id": "TI-008",
+  "title": "Ransomware Precursor Activity Advisory",
+  "published_date": "2026-06-28",
+  "content": "Pre-ransomware activity often includes credential access, discovery commands, and disabling of security tooling in the hours before encryption begins. Early detection of the reconnaissance phase significantly improves containment odds.",
+  "indicators": [],
+  "techniques": [
+    "T1562",
+    "T1490"
+  ],
+  "indicator_verdicts": {}
+}

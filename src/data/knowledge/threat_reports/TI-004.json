@@ -1,0 +1,15 @@
+{
+  "report_id": "TI-004",
+  "title": "Distributed Credential Stuffing from European Hosting Ranges",
+  "published_date": "2026-07-15",
+  "content": "Multiple hosts within hosting ranges including 185.220.101.7 have been observed performing low-and-slow credential stuffing across unrelated organizations, targeting several internal hosts simultaneously with common usernames such as root, admin, and test.",
+  "indicators": [
+    "185.220.101.7"
+  ],
+  "techniques": [
+    "T1110"
+  ],
+  "indicator_verdicts": {
+    "185.220.101.7": "malicious"
+  }
+}

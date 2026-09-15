@@ -1,0 +1,12 @@
+{
+  "report_id": "TI-015",
+  "title": "Exploitation of Public-Facing Applications - Quarterly Roundup",
+  "published_date": "2026-07-05",
+  "content": "Public-facing application exploitation remains a common initial access route, frequently followed by external remote service abuse for persistence.",
+  "indicators": [],
+  "techniques": [
+    "T1190",
+    "T1133"
+  ],
+  "indicator_verdicts": {}
+}

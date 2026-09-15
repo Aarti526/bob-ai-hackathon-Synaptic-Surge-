@@ -1,0 +1,12 @@
+{
+  "report_id": "TI-006",
+  "title": "PowerShell-Based Post-Exploitation Trends",
+  "published_date": "2026-08-01",
+  "content": "Encoded PowerShell execution remains a leading post-exploitation technique following account compromise, frequently used to download additional tooling or establish a reverse shell. Analysts should treat encoded/obfuscated PowerShell command lines as higher priority than routine administrative scripting.",
+  "indicators": [],
+  "techniques": [
+    "T1059.001",
+    "T1027"
+  ],
+  "indicator_verdicts": {}
+}

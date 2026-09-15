@@ -1,0 +1,15 @@
+{
+  "report_id": "TI-002",
+  "title": "C2 Infrastructure Update: 198.51.100.0/24 Range",
+  "published_date": "2026-09-01",
+  "content": "Follow-up analysis confirms 198.51.100.23 continues to serve as a command and control endpoint for the credential-abuse cluster tracked under TI-001. Sessions beaconing to this address after a privileged login should be treated as high confidence indicators of compromise on finance-tier assets.",
+  "indicators": [
+    "198.51.100.23"
+  ],
+  "techniques": [
+    "T1071.001"
+  ],
+  "indicator_verdicts": {
+    "198.51.100.23": "malicious"
+  }
+}

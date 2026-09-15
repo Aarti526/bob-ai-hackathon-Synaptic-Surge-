@@ -1,0 +1,72 @@
+name: Validate Submission
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Check required files exist
+        run: |
+          test -f submission.yaml || { echo "::error::submission.yaml is missing"; exit 1; }
+          test -f docs/setup-guide.md || { echo "::error::docs/setup-guide.md is missing"; exit 1; }
+          test -f demo/demo-video-link.txt || { echo "::error::demo/demo-video-link.txt is missing"; exit 1; }
+
+      - name: Validate submission.yaml
+        run: |
+          python - <<'EOF'
+          import sys
+          import yaml
+
+          with open("submission.yaml") as f:
+              data = yaml.safe_load(f)
+
+          if not isinstance(data, dict):
+              print("::error::submission.yaml did not parse to a mapping")
+              sys.exit(1)
+
+          required_paths = [
+              ("team", "name"),
+              ("team", "track"),
+              ("team", "lead", "name"),
+              ("team", "lead", "email"),
+              ("submission", "title"),
+              ("submission", "problem_statement"),
+              ("submission", "solution_summary"),
+          ]
+
+          def get(d, path):
+              for key in path:
+                  if not isinstance(d, dict) or key not in d:
+                      return None
+                  d = d[key]
+              return d
+
+          missing = []
+          for path in required_paths:
+              value = get(data, path)
+              if value is None or (isinstance(value, str) and not value.strip()):
+                  missing.append(".".join(path))
+
+          key_features = get(data, ("submission", "key_features"))
+          if not key_features or not isinstance(key_features, list) or len(key_features) == 0:
+              missing.append("submission.key_features")
+
+          if missing:
+              print(f"::error::Missing or empty required field(s): {', '.join(missing)}")
+              sys.exit(1)
+
+          print("submission.yaml OK")
+          EOF

@@ -103,3 +103,7 @@ singleton), scoring, MITRE mapping, RAG (retrieval, threshold, conflict), BLUF (
 provider, malformed LLM output, provider exception, deterministic fallback), and a
 full end-to-end run against the generated dataset checked against
 `src/data/ground_truth/scenarios.json`.
+
+## Presentation Link 
+
+https://docs.google.com/presentation/d/1Gabmvzbx7q2z3DQSwGamsJhk5nYo1hqx/edit?usp=drive_link&ouid=109360303401366573121&rtpof=true&sd=true
